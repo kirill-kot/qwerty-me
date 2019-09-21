@@ -1,0 +1,138 @@
+@import 'mixins';
+//colors
+$black: #000000;
+$white: #ffffff;
+$grey: #67676a;
+$blue: #4d7195;
+$border-radius: 0;
+
+// breakpoint variables
+$xl: 1919.99px;
+$lg: 1599.99px;
+$lm: 1279.99px;
+$md: 1023.99px;
+$sm: 991.99px;
+$xs: 599.99px;
+
+// dimensions variables
+$height: height;
+$min-height: min-height;
+$max-height: max-height;
+$lh: line-height;
+$width: width;
+$min-width: min-width;
+$max-width: max-width;
+$padding: padding;
+$pt: padding-top;
+$pl: padding-left;
+$pr: padding-right;
+$pb: padding-bottom;
+$margin: margin;
+$mt: margin-top;
+$ml: margin-left;
+$mr: margin-right;
+$mb: margin-bottom;
+$top: top;
+$left: left;
+$right: right;
+$bottom: bottom;
+$border-radius: border-radius;
+$ti: text-indent;
+$fsize: font-size;
+$ls: letter-spacing;
+$border-rad: border-radius;
+$border-w: border-width;
+
+// body font size
+$browser-context: 10;
+
+// typography scale
+$body-font-size: ( null: 10 );
+
+
+//vars
+/// section
+$section: (null: 92, $xl: 92, $lg: 86, $lm: 72, $md: 64, $sm: 52, $xs: 48);
+$s-head: (null: 32, $xl: 32, $lg: 30, $lm: 28, $md: 24, $sm: 24, $xs: 28);
+$sec-head-mb: (null: 50, $xl: 50, $lg: 48, $lm: 44, $md: 40, $sm: 36, $xs: 36);
+$s-subhead: (null: 30, $xl: 30, $lg: 28, $lm: 26, $md: 24, $sm: 26, $xs: 28);
+$sec-subhead-mb: (null: 50, $xl: 50, $lg: 48, $lm: 44, $md: 40, $sm: 36, $xs: 36);
+/// text
+$t-p: (null: 18, $xl: 18, $lg: 16, $lm: 16, $md: 14, $sm: 24, $xs: 24);
+///round icons
+$round-i: (null: 80, $xl: 80, $lg: 72, $lm: 68, $md: 64, $sm: 68, $xs: 72);
+$round-i-p: (null: 12, $xl: 12, $lg: 8, $lm: 8, $md: 12, $sm: 12, $xs: 12);
+///button
+$btn-p: (null: 32, $xl: 32, $lg: 32, $lm: 28, $md: 24, $sm: 24, $xs: 28);
+$btn-fs: (null: 22, $xl: 22, $lg: 20, $lm: 20, $md: 18, $sm: 24, $xs: 28);
+$btn-ls: (null: -1, $xl: -1, $md: 0, $sm: 0, $xs: 0);
+$btn-h: (null: 50, $xl: 50, $lg: 48, $lm: 48, $md: 42, $sm: 48, $xs: 48);
+$btn-br: (null: 10, $xl: 10, $lg: 9, $lm: 8, $md: 8, $sm: 9, $xs: 10);
+/// header
+$header-h: (null: 229 );
+$header-p: (null: 50, $xl: 48, $lg: 44, $lm: 40, $md: 36, $sm: 0, $xs: 0);
+$header-m: (null: 33, $xl: 30, $lg: 28, $lm: 24, $md: 20, $sm: 20, $xs: 24);
+$h-addr-fs: (null: 22, $xl: 22, $lg: 20, $lm: 18, $md: 22, $sm: 26, $xs: 30);
+$h-addr-m: (null: -30, $xl: -30, $lg: -28, $lm: -24, $md: -20, $sm: -24, $xs: -30);
+$header-ddown-fs: (null: 48, $xl: 48, $lg: 40, $lm: 36, $md: 24, $sm: 22, $xs: 18);
+////header socials
+$header-socials-w: (null: 33, $xl: 33, $lg: 30, $lm: 28, $md: 24, $sm: 36, $xs: 48);
+$header-socials-w-2: (null: 16, $xl: 16, $lg: 15, $lm: 14, $md: 12, $sm: 13, $xs: 24);
+$header-socials-br: (null: 10, $xl: 10, $lg: 9, $lm: 8, $md: 8, $sm: 4, $xs: 4);
+$header-socials-br-2: (null: 5, $xl: 5, $lg: 4.5, $lm: 4, $md: 4, $sm: 2, $xs: 2);
+// main
+/// banner
+$banner-mh: (null: 470, $xl: 440, $lg: 400, $lm: 360, $md: 320, $sm: 360, $xs: 400);
+$banner-p: (null: 50, $xl: 50, $lg: 50, $lm: 48, $md: 44, $sm: 48, $xs: 50);
+$banner-h1: (null: 48, $xl: 48, $lg: 42, $lm: 38, $md: 36, $sm: 44, $xs: 40);
+/// what
+$what-ricon-mr: (null: 10, $xl: 10, $lg: 10, $lm: 9, $md: 8, $sm: 9, $xs: 10);
+$what-text-w: (null: 10, $xl: 10, $lg: 10, $lm: 9, $md: 8, $sm: 9, $xs: 10);
+/// together
+$together-m: (null: 8, $xl: 8, $lg: 6, $lm: 6, $md: 4, $sm: 10, $xs: 16);
+/// cases
+$cases-fs: (null: 18, $xl: 18, $lg: 16, $lm: 16, $md: 14, $sm: 16, $xs: 18);
+///shots
+$shot-h: (null: 370, $xl: 370, $lg: 340, $lm: 280, $md: 240, $sm: 280, $xs: 340);
+$shot-p: (null: 20, $xl: 20, $lg: 18, $lm: 16, $md: 16, $sm: 16, $xs: 18);
+$small-fs: (null: 16, $xl: 16, $lg: 15, $lm: 16, $md: 15, $sm: 16, $xs: 16);
+///about
+$about-h: (null: 760, $xl: 760, $lg: 680, $lm: 600, $md: 600, $sm: 640, $xs: 720);
+$about-dig:  (null: 274, $xl: 274, $lg: 240, $lm: 210, $md: 180, $sm: 160, $xs: 180);
+$about-dig-br:  (null: 10, $xl: 10, $lg: 9, $lm: 8, $md: 8, $sm: 9, $xs: 10);
+$about-dig-text-m:  (null: 60, $xl: 60, $lg: 50, $lm: 48, $md: 42, $sm: 24, $xs: 36);
+$about-dig-huge-fs:  (null: 90, $xl: 90, $lg: 84, $lm: 78, $md: 72, $sm: 68, $xs: 64);
+//contact
+$contact-bw: (null: 3, $xl: 3, $lg: 3, $lm: 2, $md: 2, $sm: 2, $xs: 3);
+$contact-textarea-h: (null: 185, $xl: 185, $lg: 150, $lm: 150, $md: 136, $sm: 150, $xs: 160);
+//footer
+$yMapz: (null: 260, $xl: 260, $lg: 240, $lm: 240, $md: 200, $sm: 240, $xs: 280);
+$small-fs: (null: 10, $xl: 10, $lg: 9, $lm: 9, $md: 8, $sm: 9, $xs: 10);
+
+
+// reusable
+.full {
+  width: 100%;
+}
+.white {
+  color: $white;
+}
+.white-bg {
+  background-color: $white;
+}
+.blue {
+  color: $blue;
+}
+.blue-bg {
+  background-color: $blue;
+}
+.grey {
+  color: $grey;
+}
+.grey-bg {
+  background-color: $grey;
+}
+p {
+  margin: 0;
+  padding: 0;
+}

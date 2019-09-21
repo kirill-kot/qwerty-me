@@ -1,0 +1,633 @@
+@import 'variables';
+
+//prerequisites
+html {
+  overflow-x: hidden;
+  line-height: 1.2;
+  @include font-size-map($body-font-size);
+}
+* {
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+section {
+  @include universal-px($section, $pt);
+  @include universal-px($section, $pb);
+  .heading {
+    font-family: 'PT Sans';
+    @include universal-px($s-head, $fsize);
+    @include universal-px($sec-head-mb, $mb);
+    b {
+      font-weight: bolder;
+    }
+  }
+  .subheading {
+    font-family: 'PT Sans';
+    @include universal-px($s-subhead, $fsize);
+    @include universal-px($sec-subhead-mb, $mb);
+  }
+}
+.text {
+  p {
+    font-family: 'PT Sans';
+    @include universal-px($t-p, $fsize);
+  }
+  b {
+    @extend p;
+  }
+}
+.round-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  @include universal-px($round-i, $width);
+  @include universal-px($round-i, $height);
+  @include universal-px($round-i-p, $padding);
+}
+
+.button {
+  margin-top: 50px;
+  text-align: center;
+  .btn {
+    font-family: 'AG_Futura';
+    line-height: 1.5;
+    text-decoration: none;
+    @include universal-px($btn-p, $pl);
+    @include universal-px($btn-p, $pr);
+    @include universal-px($btn-fs, $fsize);
+    @include universal-px($btn-ls, $ls);
+    @include universal-px($btn-h, $height);
+    @include universal-px($btn-br, $border-rad);
+    &:hover {
+      color: $white;
+      background-color: darken($blue, 11%) !important;
+    }
+  }
+}
+//header
+header {
+  .mainNav {
+    z-index: 15;
+  }
+  @include universal-px($header-p, $pt);
+  height: auto;
+  margin-bottom: 0;
+  .address {
+    a:hover {
+      color: $blue !important;
+      text-decoration: underline;
+    }
+    font-family: 'AG_Futura';
+    @include universal-px($h-addr-fs, $fsize);
+    @include universal-px($h-addr-m, $ml);
+    @include universal-px($h-addr-m, $mr);
+    text-align: right;
+    letter-spacing: -1px;
+    .city {
+      display: inline-block;
+    }
+    .dropdown-toggle {
+      &:after{
+        display: none;
+      }
+    }
+    .dropdown-menu {
+      z-index: 250;
+      left: auto;
+    }
+  }
+  .tel {
+    @extend .address;
+  }
+  .tel:hover {
+    color: $blue !important;
+    text-decoration: underline;
+  }
+  .socials {
+    @media all and (min-width: 992px) {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    .social {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 2px;
+      @include universal-px($header-socials-w, $height);
+      @include universal-px($header-socials-w, $width);
+      @include universal-px($header-socials-br, $border-rad);
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  }
+  .navbar-collapse {
+    a:hover {
+      color: $blue !important;
+      text-decoration: underline;
+    }
+    .nav-link {
+      font-family: 'AG_Futura';
+      @include universal-px($h-addr-fs, $fsize);
+      @include universal-px($btn-ls, $ls);
+      text-decoration: none;
+    }
+  }
+
+  .menubar {
+    a:hover {
+      color: $blue !important;
+      text-decoration: underline;
+    }
+    .nav-link {
+      font-family: 'AG_Futura';
+      color: $blue !important;
+      @include universal-px($h-addr-fs, $fsize);
+      @include universal-px($btn-ls, $ls);
+      text-decoration: none;
+      &:hover {
+        color: $blue !important;
+        text-decoration: underline;
+      }
+    }
+  }
+  .addBar {
+    a:hover {
+      color: $white !important;
+      text-decoration: underline;
+    }
+    .nav-link {
+      font-family: 'AG_Futura';
+      color: $white !important;
+      @include universal-px($h-addr-fs, $fsize);
+      @include universal-px($btn-ls, $ls);
+      text-decoration: none;
+      &:hover {
+        color: $white !important;
+        text-decoration: underline;
+      }
+      a {
+        &:hover {
+          color: $white !important;
+        }
+      }
+    }
+  }
+}
+@media all and (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+@media all and (min-width: 992px) {
+  header .menuBar .navbar-nav {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+@media all and (min-width: 992px) {
+  header .addBar .navbar-nav {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+//main
+
+//banner
+
+.banner {
+  @include universal-px($banner-mh, $min-height);
+  @include universal-px($banner-p, $pt);
+  @include universal-px($banner-p, $pb);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .parallax {
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    width: 100%;
+    @include universal-px($banner-mh, $height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h1 {
+    font-family: 'AG_Futura';
+    @include universal-px($banner-h1, $fsize);
+    text-align: right;
+    position: relative;
+    z-index: 100;
+  }
+}
+
+//what
+#what {
+  .advantage{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .round-icon {
+    @include universal-px($what-ricon-mr, $mr);
+    @include universal-px($what-ricon-mr, $mb);
+  }
+  .text {
+    display: flex;
+    width: calc(100% - 90px);
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+//together
+#together {
+  .reason{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media all and (max-width: 768px) {
+      flex-direction: column;
+    }
+    @include universal-px($together-m, $mt);
+    @include universal-px($together-m, $mb);
+  }
+  .round-icon {
+    @include universal-px($what-ricon-mr, $mr);
+    @include universal-px($what-ricon-mr, $ml);
+  }
+}
+@media all and (max-width: 768px) {
+  .we {
+    p {
+      &:before {
+        content: '\041C\044B\003A\0020';
+    }
+    }
+  }
+  .you {
+    p{
+    &:before {
+      content: '\0412\044B\003A\0020';
+    }
+    }
+  }
+}
+//cases
+
+#cases {
+  .case {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .info {
+    small {
+      font-family: 'AG_Futura';
+      @include universal-px($cases-fs, $fsize);
+      @include universal-px($together-m, $mt);
+      @include universal-px($together-m, $mb);
+    }
+  }
+  .shot {
+     @include universal-px($shot-h, $height);
+     @include universal-px($shot-h, $width);
+     @include universal-px($what-text-w, $border-rad);
+     overflow: hidden;
+     position: relative;
+    align-self: center;
+     .overlay {
+       z-index: 1200;
+       height: 100%;
+       width: 100%;
+       flex-direction: column;
+       position: absolute;
+       background-color: rgba(77, 113, 149, 0.6);
+       @include universal-px($shot-p, $padding);
+       transition-duration: .5s;
+       .advice {
+         p {
+          @include universal-px($small-fs, $fsize);
+         }
+         i {
+           @extend p;
+         }
+       }
+
+     }
+  }
+  .out {
+    bottom: -100%;
+    transition-duration: .5s;
+  }
+  .in {
+    bottom: 0;
+    transition-duration: .5s;
+  }
+}
+
+//about
+#about {
+  @include universal-px($about-h, $min-height);
+  @media all and (max-width: 992px) {
+    height: 100%;
+  }
+  .parallax {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    width: 100%;
+    @include universal-px($about-h, $min-height);
+    @media all and (max-width: 992px) {
+      height: 100%;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .overlay{
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     z-index: -1;
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     display: block;
+     background-color: rgba(104, 105, 108, 0.4);
+  }
+  h1 {
+    font-weight: bolder;
+    @include universal-px($banner-p, $mb);
+  }
+  .digits {
+    flex-direction: column;
+    @media all and (max-width: 992px) {
+      align-items: center;
+    }
+    .digit {
+      border: 10px solid #ffffff;
+      @include universal-px($about-dig, $min-height);
+      @include universal-px($about-dig, $min-width);
+      @media all and (max-width: 992px) {
+        @include universal-px($about-dig, $width);
+        margin-bottom: 1rem;
+      }
+      @include universal-px($about-dig-br, $border-rad);
+      @include universal-px($about-dig-br, $border-w);
+      flex-direction: column;
+    }
+    .text {
+      p {
+        font-family: 'AG_Futura';
+        @include universal-px($h-addr-fs, $fsize);
+        @include universal-px($about-dig-text-m, $mt);
+        @include universal-px($about-dig-text-m, $mb);
+        @include universal-px($btn-ls, $ls);
+      }
+    }
+    .huge {
+      @include universal-px($about-dig-huge-fs, $fsize);
+      line-height: 1;
+      font-weight: bolder;
+    }
+  }
+}
+.client {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img {
+    filter: grayscale(1);
+    transition-duration: .5s;
+    &:hover {
+    filter: grayscale(0);
+    transition-duration: .5s;
+    }
+  }
+}
+//contact
+#contact {
+  background-color: #f7f7f8;
+  input {
+    @include universal-px($contact-bw, $border-w);
+    @include universal-px($h-addr-fs, $fsize);
+    border: solid $blue;
+  }
+  textarea {
+    @include universal-px($contact-textarea-h, $min-height);
+    @include universal-px($h-addr-fs, $fsize);
+    @include universal-px($contact-bw, $border-w);
+    border: solid $blue;
+  }
+  .btn {
+    position: absolute;
+    bottom: 17.5px;
+    @include universal-px($h-addr-fs, $fsize);
+    right: 15px;
+    &:hover {
+      color: $white;
+      background-color: darken($blue, 11%) !important;
+    }
+  }
+}
+
+//footer
+footer {
+  .addrCol {
+    @media all and (max-width: 991.99px) {
+      order: 1;
+    }
+  }
+  .address {
+    font-family: 'PT Sans';
+    @include universal-px($h-addr-fs, $fsize);
+    @include universal-px($h-addr-m, $ml);
+    @include universal-px($h-addr-m, $mr);
+    @media all and (max-width: 992px) {
+      margin: 0 !important;
+    }
+    text-align: left;
+    letter-spacing: -1px;
+    color: $white;
+    a {
+      font-family: 'PT Sans';
+      @include universal-px($h-addr-fs, $fsize);
+      text-align: left;
+      clear: both;
+      display: block;
+    }
+    b {
+      font-weight: bolder;
+    }
+    .dropdown-toggle {
+      font-family: 'PT Sans';
+      @include universal-px($s-head, $fsize);
+      color: $white;
+      &:after{
+        display: none;
+      }
+    }
+  }
+  .socials {
+    @media all and (max-width: 991.99px) {
+      order: 3;
+      justify-content: flex-start!important;
+    }
+    .social {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 2px;
+      @include universal-px($header-socials-w, $height);
+      @include universal-px($header-socials-w, $width);
+      @include universal-px($header-socials-br, $border-rad);
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      @media all and (max-width: 991.99px) {
+        margin-left: 5px;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  .dropdown-item {
+    @include universal-px($h-addr-fs, $fsize);
+    color: $blue;
+    &:focus {
+      color: $white;
+      background-color: $blue;
+    }
+    &:hover {
+      color: $white;
+      background-color: $blue;
+    }
+  }
+  .heading {
+    margin-bottom: 30px;
+    text-decoration: underline !important;
+  }
+  .yaMapz {
+    @media all and (max-width: 991.99px) {
+      order: 2;
+      margin-bottom: 1rem;
+    }
+    @include universal-px($yMapz, $height);
+  }
+  .afterFooter {
+    @media all and (max-width: 991.99px) {
+      order: 4;
+    }
+  }
+  hr {
+    border-top: 1px solid $white !important;
+    @include universal-px($header-p, $mt);
+    @media all and (max-width: 991.99px) {
+      margin-top: 36px;
+    }
+  }
+  small {
+     font-family: 'PT Sans';
+    @include universal-px($small-fs, $fsize);
+     color: $white;
+  }
+}
+
+.navbar-toggler {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+#mobMenu {
+  .dropdown-menu {
+    ul {
+      padding: 1rem;
+    }
+  }
+  #mobDrop {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 2000;
+    color: $blue;
+    #mobDropLink {
+      left: auto;
+      right: 0;
+    }
+    i {
+      @include universal-px($h-addr-fs, $fsize);
+    }
+    &:after {
+      display: none;
+    }
+  }
+  .socials {
+    @media all and (max-width: 991.99px) {
+      display: flex;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      justify-content: center !important;
+    }
+    .social {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 2px;
+      @include universal-px($header-socials-w-2, $height);
+      @include universal-px($header-socials-w-2, $width);
+      @include universal-px($header-socials-br-2, $border-rad);
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      @media all and (max-width: 991.99px) {
+        margin-left: 5px;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  .address {
+    margin: 0 !important;
+    p {
+      @include universal-px($header-ddown-fs, $fsize);
+      line-height: 1;
+    }
+    .city {
+      height: 10px;
+      a {
+        line-height: 1;
+        height: 10px;
+        display: block;
+        @include universal-px($header-ddown-fs, $fsize);
+      }
+    }
+  }
+  .tel {
+    @include universal-px($header-ddown-fs, $fsize);
+  }
+}
